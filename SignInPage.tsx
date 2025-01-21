@@ -30,7 +30,7 @@ const backgroundImage = {
 
 };
 
-function App({ route, navigation }: any): React.JSX.Element {
+function SignIn({ route, navigation }: any): React.JSX.Element {
   //const { name } = route.params;
 
   return (
@@ -42,9 +42,7 @@ function App({ route, navigation }: any): React.JSX.Element {
           <TextInputs></TextInputs>
           <RememberMeSwitch></RememberMeSwitch>
           <SignUpButton></SignUpButton>
-          <AlreadyButton onPress={() => navigation.navigate('SignInPage')}>
-
-          </AlreadyButton>
+          
 
           <ActivityIndicator size='large'/>
 
@@ -71,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default SignIn;

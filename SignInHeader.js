@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.headerText}>
-        Getting Started!
+        Welcome Back!
       </Text>
       <Text style = {styles.normalText}>
-      Create an account to continue.
+      Sign in to continue.
       </Text>
     </View>
   );

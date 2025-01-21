@@ -2,42 +2,37 @@ import React from 'react';
 import{
     SafeAreaView,
     StyleSheet,
+    View,
     Text,
     Button,
+    Image,
     ImageBackground,
     TextInput,
 }from 'react-native';
 import Header from './Header';
-import BackGround from './Background'
+import BackGround from './Background';
+import SomeText from './MainMenuText';
+import MainScreenImage from './MainScreenImage'
+import AppImage from './MainScreenImage';
+import CircleButton from './CircleButton';
+//import TextComponent from './MainMenuText';
+import TextComponent1 from './MainMenuText';
 //function App(): React.JSX.Element {
  
 
 const MainMenuScreen = ({ navigation}: any)=>{
-  const [name, setName] = React.useState('');
+  //const [name, setName] = React.useState('');
     return(
         <SafeAreaView style={styles.safeArea}>
         <BackGround> 
-        <Header /> 
-          <TextInput
-                    style={{
-                      height: 40,
-                      width: 400,
-                      borderColor: 'gray',
-                      borderWidth: 1,
-                      alignItems: 'center',
-                      textAlignVertical: 'top',
-                      color: '#00FF00',
-                    }}
-                    placeholder="Enter your name"
-                    value={name}
-                    onChangeText={(text) => setName(text)}
-                    placeholderTextColor="#00FF00"
-                    //defaultValue="Type in me please"
-                  />
-        <Button
-            title="Enter App"
-            onPress={() => navigation.navigate('AppContent', {name: name})} // Navigate to the app screen
+          <View style = {styles.contentContainer}>
+        <AppImage style = {styles.image}/>
+        <TextComponent1 />
+        <CircleButton
+          onPress={() => navigation.navigate('AppContent')}
+          style={styles.button}
           />
+          </View>
         </BackGround>
       </SafeAreaView>
     );
@@ -45,8 +40,8 @@ const MainMenuScreen = ({ navigation}: any)=>{
 const styles = StyleSheet.create({
     safeArea: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+       // alignItems: 'center',
+        //justifyContent: 'center',
       },
       text:{
         fontSize: 24, marginBottom:20.
@@ -55,5 +50,19 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover', // Ensures the background image covers the entire screen
       },
+      contentContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      button: {
+        marginTop: 100, // Add space between image and button
+      },
+      image: {
+        width: 200,
+        height: 200,
+        resizeMode: 'contain',
+      },
+  
 });
 export default MainMenuScreen;
