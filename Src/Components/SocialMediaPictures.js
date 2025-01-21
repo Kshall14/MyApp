@@ -6,7 +6,7 @@ const ImageRow = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./Assets/GoogleChrome.jpg')}
+        source={require('../SourceImages/Assets/GoogleChrome.jpg')}
         style={styles.image}
         resizeMode="contain"
       />

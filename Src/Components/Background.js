@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { Text } from 'react-native-gesture-handler';
 
-const backgroundImage = require('./Src/SourceImages/Assets/BackGround.jpg');
+const backgroundImage = require('../SourceImages/Assets/BackGround.jpg');
 
 const Background = ({ children }) => {
   return (

@@ -2,7 +2,7 @@
 import React from 'react';
 import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-const imageSource = require('./Src/SouceImages/Assets/DownArrow.jpg');
+const imageSource = require('../SouceImages/Assets/DownArrow.jpg');
 
 const CircleButton = ({ onPress,style }) => {
   return (

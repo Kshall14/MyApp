@@ -4,7 +4,7 @@ import { Image, StyleSheet } from 'react-native';
 const AppImage = (style) => {
   return (
     <Image
-      source={require('./Src/SourceImages/Assets/MyCar.jpg')}
+      source={require('../SourceImages/Assets/MyCar.jpg')}
       style={styles.image}
     />
   );
