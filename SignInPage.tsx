@@ -16,13 +16,13 @@ import {
   ActivityIndicator,
   ScrollView,
 } from 'react-native';
-import Header from './Header';
+import Header from './SignInHeader';
 import RememberMeSwitch from './RememberMeSwitch';
 import BackGround from './Background';
 import SocialMediaPictures from'./SocialMediaPictures';
 import ImageRow from './SocialMediaPictures';
-import TextInputs from './TextInputs';
-import SignUpButton from './SignUpButton';
+import TextInputs from './SignInTextInputs';
+import SignInButton from './FinalSignInButton';
 import AlreadyButton from './AlreadyHaveAccountButton';
 // Define the background image
 const backgroundImage = {
@@ -41,7 +41,7 @@ function SignIn({ route, navigation }: any): React.JSX.Element {
           <ImageRow></ImageRow>
           <TextInputs></TextInputs>
           <RememberMeSwitch></RememberMeSwitch>
-          <SignUpButton></SignUpButton>
+          <SignInButton></SignInButton>
           
 
           <ActivityIndicator size='large'/>
