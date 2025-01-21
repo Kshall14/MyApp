@@ -16,21 +16,21 @@ import {
   ActivityIndicator,
   ScrollView,
 } from 'react-native';
-import Header from './Header';
-import RememberMeSwitch from './RememberMeSwitch';
-import BackGround from './Background';
-import SocialMediaPictures from'./SocialMediaPictures';
-import ImageRow from './SocialMediaPictures';
-import TextInputs from './TextInputs';
-import SignUpButton from './SignUpButton';
-import AlreadyButton from './AlreadyHaveAccountButton';
+import Header from '../Components/SignInHeader';
+import RememberMeSwitch from '../Components/RememberMeSwitch';
+import BackGround from '../Components/Background';
+import SocialMediaPictures from'../Components/SocialMediaPictures';
+import ImageRow from '../Components/SocialMediaPictures';
+import TextInputs from '../Components/SignInTextInputs';
+import SignInButton from '../Components/FinalSignInButton';
+import AlreadyButton from '../Components/AlreadyHaveAccountButton';
 // Define the background image
 const backgroundImage = {
   uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
 
 };
 
-function App({ route, navigation }: any): React.JSX.Element {
+function SignIn({ route, navigation }: any): React.JSX.Element {
   //const { name } = route.params;
 
   return (
@@ -41,10 +41,8 @@ function App({ route, navigation }: any): React.JSX.Element {
           <ImageRow></ImageRow>
           <TextInputs></TextInputs>
           <RememberMeSwitch></RememberMeSwitch>
-          <SignUpButton></SignUpButton>
-          <AlreadyButton onPress={() => navigation.navigate('SignInPage')}>
-
-          </AlreadyButton>
+          <SignInButton></SignInButton>
+          
 
           <ActivityIndicator size='large'/>
 
@@ -71,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default SignIn;

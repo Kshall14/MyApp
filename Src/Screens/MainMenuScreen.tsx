@@ -9,14 +9,14 @@ import{
     ImageBackground,
     TextInput,
 }from 'react-native';
-import Header from './Header';
-import BackGround from './Background';
-import SomeText from './MainMenuText';
-import MainScreenImage from './MainScreenImage'
-import AppImage from './MainScreenImage';
-import CircleButton from './CircleButton';
+import Header from '../Components/Header';
+import BackGround from '../Components/Background';
+import SomeText from '../Components/MainMenuText';
+import MainScreenImage from '../Components/MainScreenImage'
+import AppImage from '../Components/MainScreenImage';
+import CircleButton from '../Components/CircleButton';
 //import TextComponent from './MainMenuText';
-import TextComponent1 from './MainMenuText';
+import TextComponent1 from '../Components/MainMenuText';
 //function App(): React.JSX.Element {
  
 
