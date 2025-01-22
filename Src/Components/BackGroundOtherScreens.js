@@ -4,7 +4,7 @@ import { Text } from 'react-native-gesture-handler';
 
 const backgroundImage = require('../SourceImages/Assets/BackGround.jpg');
 
-const Background = ({ children }) => {
+const Background3 = ({ children }) => {
   return (
     <View style={styles.backgroundStyle}>
       <ImageBackground
@@ -19,19 +19,20 @@ const Background = ({ children }) => {
 
 const styles = StyleSheet.create({
   backgroundStyle: {
-    flex: 1, // Ensures it fills the entire screen
+    //flex: 1, // Ensures it fills the entire screen
     //justifyContent: 'center', // Centers content if there is any
     //alignItems: 'center', // Centers content if there is any
     resizeMode: 'cover',
     width: '100%',
-   // height: 50, // Makes sure the image is stretched properly
+    height: 50, // Makes sure the image is stretched properly
   },
   backgroundImage: {
-    flex: 1,
-    //height: 50,
+    //flex: 1,
+    height: 50,
     resizeMode: 'cover',
     justifyContent: 'center',
+    zIndex: 1,
   },
 });
 
-export default Background;
+export default Background3;

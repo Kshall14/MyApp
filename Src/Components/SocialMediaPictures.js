@@ -11,12 +11,12 @@ const ImageRow = () => {
         resizeMode="contain"
       />
       <Image
-        source={require('./Assets/FaceBook.jpg')}
+        source={require('../SourceImages/Assets/FaceBook.jpg')}
         style={styles.image}
         resizeMode="contain"
       />
       <Image
-        source={require('./Assets/Twitter.jpg')}
+        source={require('../SourceImages/Assets/Twitter.jpg')}
         style={styles.image}
         resizeMode="contain"
       />

@@ -16,42 +16,37 @@ import {
   ActivityIndicator,
   ScrollView,
 } from 'react-native';
-import Header from '../../Src/Components/Header'
-//import Header from './Src/Components/Header';
-import RememberMeSwitch from '../../Src/Components/RememberMeSwitch';
-import BackGround from '../../Src/Components/Background';
-import SocialMediaPictures from'../../Src/Components/SocialMediaPictures';
-import ImageRow from '../../Src/components/SocialMediaPictures';
-import TextInputs from '../../Src/Components/TextInputs';
-import SignUpButton from '../../Src/Components/SignUpButton';
-import AlreadyButton from '../../Src/Components/AlreadyHaveAccountButton';
-// Define the background image
-const backgroundImage = {
-  uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
+import CombinedBackground from '../Components/CombinedBackgrounds';
+import HelpPressable from '../Components/NeedHelpPressable';
+import Header from '../Components/Header'
+import Background2 from '../Components/Background2';
+import Background3 from '../Components/BackGroundOtherScreens';
+import RememberMeSwitch from '../Components/RememberMeSwitch';
+import BackGround from '../Components/Background';
+import ImageRow from '../Components/SocialMediaPictures';
+import TextInputs from '../Components/TextInputs';
+import SignUpButton from '../Components/SignUpButton';
+import APressable from '../Components/Pressable'
 
-};
 
 function App({ route, navigation }: any): React.JSX.Element {
   //const { name } = route.params;
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <BackGround> 
-        <ScrollView>
-          <Header></Header>
-          <ImageRow></ImageRow>
-          <TextInputs></TextInputs>
-          <RememberMeSwitch></RememberMeSwitch>
-          <SignUpButton></SignUpButton>
-          <AlreadyButton onPress={() => navigation.navigate('SignInPage')}>
+    <CombinedBackground>
+      <HelpPressable />
+        <Header></Header>
+        <ImageRow></ImageRow>
+        <TextInputs></TextInputs>
+        <RememberMeSwitch></RememberMeSwitch>
+        <SignUpButton></SignUpButton>
 
-          </AlreadyButton>
-
-          <ActivityIndicator size='large'/>
-
-        </ScrollView>
-      </BackGround> 
-    </SafeAreaView>
+        <APressable onPress={() => navigation.navigate('SignInPage')} />
+        <ActivityIndicator size='large'/>
+      
+        </CombinedBackground>
+  </SafeAreaView>
   );
 }
 
@@ -62,13 +57,13 @@ const styles = StyleSheet.create({
   },
   safeArea: {
     flex: 1,
-    alignItems: 'center',
+    //alignItems: 'center',
     justifyContent: 'flex-start',
   },
   image: {
     width: 200,
     height: 200,
-    marginTop: 20,
+    marginTop: 5,
   },
 });
 

@@ -19,6 +19,8 @@ import {
 import Header from '../Components/SignInHeader';
 import RememberMeSwitch from '../Components/RememberMeSwitch';
 import BackGround from '../Components/Background';
+import PasswordPressable from '../Components/ForgotPasswordPressable';
+import CombinedBackground from '../Components/CombinedBackgrounds';
 import SocialMediaPictures from'../Components/SocialMediaPictures';
 import ImageRow from '../Components/SocialMediaPictures';
 import TextInputs from '../Components/SignInTextInputs';
@@ -35,7 +37,8 @@ function SignIn({ route, navigation }: any): React.JSX.Element {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <BackGround> 
+      <CombinedBackground>
+        <PasswordPressable/>
         <ScrollView>
           <Header></Header>
           <ImageRow></ImageRow>
@@ -47,7 +50,7 @@ function SignIn({ route, navigation }: any): React.JSX.Element {
           <ActivityIndicator size='large'/>
 
         </ScrollView>
-      </BackGround> 
+        </CombinedBackground>
     </SafeAreaView>
   );
 }
@@ -59,7 +62,7 @@ const styles = StyleSheet.create({
   },
   safeArea: {
     flex: 1,
-    alignItems: 'center',
+    //alignItems: 'center',
     justifyContent: 'flex-start',
   },
   image: {
