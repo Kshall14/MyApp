@@ -5,10 +5,11 @@
  * @format
  */
 
-import React from 'react';
+import React,{useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
+  View,
   Text,
   Image,
   TextInput,
@@ -27,25 +28,28 @@ import ImageRow from '../Components/SocialMediaPictures';
 import TextInputs from '../Components/TextInputs';
 import SignUpButton from '../Components/SignUpButton';
 import APressable from '../Components/Pressable'
+import Background4 from '../Components/BetterBackground';
+import { storeData } from '../Components/Storage';
 
 
 function App({ route, navigation }: any): React.JSX.Element {
-  //const { name } = route.params;
-
   return (
     <SafeAreaView style={styles.safeArea}>
-    <CombinedBackground>
-      <HelpPressable />
+    <Background4
+     imageChildren={<HelpPressable />}
+     overlayChildren={
+      <View>
         <Header></Header>
         <ImageRow></ImageRow>
-        <TextInputs></TextInputs>
+        <TextInputs/>
         <RememberMeSwitch></RememberMeSwitch>
-        <SignUpButton></SignUpButton>
-
+        <SignUpButton/>
         <APressable onPress={() => navigation.navigate('SignInPage')} />
         <ActivityIndicator size='large'/>
-      
-        </CombinedBackground>
+        
+        </View>
+      }
+        />
   </SafeAreaView>
   );
 }
@@ -61,9 +65,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   image: {
-    width: 200,
-    height: 200,
-    marginTop: 5,
+    width: 100,
+    height: 100,
+    marginTop: 0,
   },
 });
 

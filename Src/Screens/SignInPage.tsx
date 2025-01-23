@@ -5,10 +5,11 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
+  View,
   Text,
   Image,
   TextInput,
@@ -26,32 +27,34 @@ import ImageRow from '../Components/SocialMediaPictures';
 import TextInputs from '../Components/SignInTextInputs';
 import SignInButton from '../Components/FinalSignInButton';
 import AlreadyButton from '../Components/AlreadyHaveAccountButton';
+import Background4 from '../Components/BetterBackground';
+import { getData } from '../Components/Storage';
+
 // Define the background image
 const backgroundImage = {
   uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
 
 };
 
-function SignIn({ route, navigation }: any): React.JSX.Element {
-  //const { name } = route.params;
-
+function SignIn({ route, navigation }: any): React.JSX.Element {   
   return (
     <SafeAreaView style={styles.safeArea}>
-      <CombinedBackground>
-        <PasswordPressable/>
-        <ScrollView>
-          <Header></Header>
-          <ImageRow></ImageRow>
-          <TextInputs></TextInputs>
-          <RememberMeSwitch></RememberMeSwitch>
-          <SignInButton></SignInButton>
-          
-
-          <ActivityIndicator size='large'/>
-
-        </ScrollView>
-        </CombinedBackground>
-    </SafeAreaView>
+    <Background4
+  imageChildren={<PasswordPressable />}
+  overlayChildren={
+    <View>
+      <Header></Header>
+      <ImageRow></ImageRow>
+      <TextInputs/>
+      <RememberMeSwitch></RememberMeSwitch>
+      <SignInButton
+      onPress={() => navigation.navigate('DrawerContent')}
+      />
+      <ActivityIndicator size='large' />
+    </View>
+  }
+  />
+  </SafeAreaView>
   );
 }
 
@@ -66,9 +69,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   image: {
-    width: 200,
-    height: 200,
-    marginTop: 20,
+    width: 100,
+    height: 100,
+    marginTop: 0,
   },
 });
 

@@ -1,11 +1,15 @@
 import React from 'react';
 import { Button,TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-const SignInButton =() =>{
-    return(
-        <Button style = {styles.theButton} title = 'Sign In'> </Button>
-    )
-}
+const SignInButton =({ onPress }) =>{
+  return (
+    <Button
+      title="Sign In"
+      onPress={onPress}
+      style={styles.theButton}
+    />
+  );
+};
 const styles = StyleSheet.create({
     theButton: {
       width: 60,

@@ -16,10 +16,17 @@ const APressable = ({ onPress }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    position: 'absolute',
+    top: 600,
+    left: 0,
+    right: 0,
+    //justifyContent: 'left',
+    //alignItems: 'center',
+    paddingBottom: 0,
+    //flex: 1,
+    //justifyContent: 'center',
+    //alignItems: 'center',
+    //backgroundColor: '#f5f5f5',
   },
   text: {
     fontSize: 16,

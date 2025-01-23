@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 
-const TextInputs = () => {
-  const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
+const TextInputs = () => {
   return (
     <View>
-      <Text style={styles.title}>Email:</Text>
-      <TextInput
+ <TextInput
         style={styles.input}
-        value={email}
-        onChangeText={(text) => setEmail(text)}
+        onChangeText={(text) => {
+        }}
         placeholder="Enter your email"
         keyboardType="email-address"
       />
@@ -20,16 +16,17 @@ const TextInputs = () => {
       <Text style={styles.title}>Username:</Text>
       <TextInput
         style={styles.input}
-        value={username}
-        onChangeText={(text) => setUsername(text)}
+        onChangeText={(text) => {
+
+        }}
         placeholder="Enter your username"
       />
 
       <Text style={styles.title}>Password:</Text>
       <TextInput
         style={styles.input}
-        value={password}
-        onChangeText={(text) => setPassword(text)}
+        onChangeText={(text) => {
+        }}
         placeholder="Enter your password"
         secureTextEntry={true}
       />
