@@ -6,17 +6,17 @@ const ImageRow = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../SourceImages/Assets/GoogleChrome.jpg')}
+        source={require('../SourceImages/Assets/Google.png')}
         style={styles.image}
         resizeMode="contain"
       />
       <Image
-        source={require('../SourceImages/Assets/FaceBook.jpg')}
+        source={require('../SourceImages/Assets/FaceBook.png')}
         style={styles.image}
         resizeMode="contain"
       />
       <Image
-        source={require('../SourceImages/Assets/Twitter.jpg')}
+        source={require('../SourceImages/Assets/Twitter.png')}
         style={styles.image}
         resizeMode="contain"
       />
@@ -27,11 +27,16 @@ const ImageRow = () => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'left',
+    alignItems: 'left',
+    paddingBottom: 25,
+    paddingLeft:20,
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 70,
+    height: 70,
+    marginRight: 20,
+
   },
 });
 

@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    marginRight: 10,
+    marginRight: 175,
   },
 });
 

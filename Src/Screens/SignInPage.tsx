@@ -48,7 +48,7 @@ function SignIn({ route, navigation }: any): React.JSX.Element {
       <TextInputs/>
       <RememberMeSwitch></RememberMeSwitch>
       <SignInButton
-      onPress={() => navigation.navigate('DrawerContent')}
+      onPress={() => navigation.navigate('Tabs')}
       />
       <ActivityIndicator size='large' />
     </View>

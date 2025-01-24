@@ -17,8 +17,8 @@ const APressable = ({ onPress }) => {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 600,
-    left: 0,
+    top: 470,
+    left: 50,
     right: 0,
     //justifyContent: 'left',
     //alignItems: 'center',

@@ -12,15 +12,15 @@ const AlreadyButton = ({onPress}) => {
 const styles = StyleSheet.create({
   theButton: {
     width: 300,
-    height: 60,
-    marginTop: 10,
-    marginLeft : 50,
+    height: 200,
+    marginTop: 0,
+    marginLeft : 60,
     backgroundColor: '#6495ED',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 20,
     color:'white',
   },
 });

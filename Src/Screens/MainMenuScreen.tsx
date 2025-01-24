@@ -29,7 +29,7 @@ const MainMenuScreen = ({ navigation}: any)=>{
         <AppImage style = {styles.image}/>
         <TextComponent1 />
         <CircleButton
-          onPress={() => navigation.navigate('AppContent')}
+          onPress={() => navigation.navigate('SignUp')}
           style={styles.button}
           />
           </View>

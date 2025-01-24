@@ -32,7 +32,7 @@ import Background4 from '../Components/BetterBackground';
 import { storeData } from '../Components/Storage';
 
 
-function App({ route, navigation }: any): React.JSX.Element {
+function AppContent({ route, navigation }: any): React.JSX.Element {
   return (
     <SafeAreaView style={styles.safeArea}>
     <Background4
@@ -44,8 +44,8 @@ function App({ route, navigation }: any): React.JSX.Element {
         <TextInputs/>
         <RememberMeSwitch></RememberMeSwitch>
         <SignUpButton/>
-        <APressable onPress={() => navigation.navigate('SignInPage')} />
-        <ActivityIndicator size='large'/>
+        <APressable onPress={() => navigation.navigate('SignIn')} />
+        
         
         </View>
       }
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   safeArea: {
     flex: 1,
-    //alignItems: 'center',
+    //alignItems: 'left',
     justifyContent: 'flex-start',
   },
   image: {
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default AppContent;

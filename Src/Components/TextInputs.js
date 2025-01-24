@@ -3,6 +3,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 
 const TextInputs = () => {
+
   return (
     <View>
  <TextInput
@@ -13,16 +14,15 @@ const TextInputs = () => {
         keyboardType="email-address"
       />
 
-      <Text style={styles.title}>Username:</Text>
+      
       <TextInput
         style={styles.input}
-        onChangeText={(text) => {
+        onChangeText={(handleUsernameChange) => {
 
         }}
         placeholder="Enter your username"
       />
 
-      <Text style={styles.title}>Password:</Text>
       <TextInput
         style={styles.input}
         onChangeText={(text) => {
@@ -45,6 +45,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingHorizontal: 10,
     marginBottom: 20,
+    borderRadius: 10, 
+    width: '80%', 
+    alignSelf: 'center',
   },
 });
 

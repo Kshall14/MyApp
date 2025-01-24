@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
     //backgroundColor: '#d3d3d3',
     height: 100,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'left',
     paddingTop: 0,
-    
+    paddingLeft:10,
   },
   headerText: {
     fontWeight: 'bold',
